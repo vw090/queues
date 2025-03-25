@@ -1,0 +1,30 @@
+services:
+  postgres_queue:
+    image: postgres:16
+    ports:
+    - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_USER: queue
+      POSTGRES_DB: queue
+      PGDATA: /var/lib/postgresql/data/pgdata
+
+  mariadb_queue:
+    image: mariadb:11
+    ports:
+      - "3306:3306"
+    environment:
+      MARIADB_ROOT_PASSWORD: example
+      MYSQL_DATABASE: queue
+      MYSQL_USER: queue
+      MYSQL_PASSWORD: example
+
+  rabbitmq_queue:
+    image:
+      rabbitmq:4
+    ports:
+      - "8080:8080"
+      - "5672:5672"
+    environment:
+      RABBITMQ_DEFAULT_USER: queue
+      RABBITMQ_DEFAULT_PASS: queue
