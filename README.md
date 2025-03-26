@@ -5,7 +5,7 @@ This is a mock project to learn the rabbitmq way of pushing data between queues,
 - java21 jdk
 - maven
 ## Composition:
-Pusher recieves data from the /user endpoint, saves it in a mariadb database, pushes it into the queue
+Pusher receives data from the /user endpoint, saves it in a mariadb database, pushes it into the queue
 
 Then the Receiver pulls the data off of the queue, manipulates it a little bit, and saves it in a postgres database.
 
