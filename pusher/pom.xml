@@ -12,7 +12,7 @@
 	<artifactId>pusher</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>pusher</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Demo project for moving data between queues, pusher</description>
 	<url/>
 	<licenses>
 		<license/>
